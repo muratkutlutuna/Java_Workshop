@@ -108,4 +108,33 @@ public class Islemler {
 		}
 		
 	}
+
+	private static void eklemeOgretmen() {
+		System.out.println("============= Eleme Menusu =============");
+			Kisi Otm = new Ogretmen();
+			System.out.println("Sicil numaranizi giriniz : ");
+			String sicilNo = scan.nextLine();
+			System.out.println("Lutfen bolumunuzu giriniz : ");
+			String bolum = scan.nextLine();
+			
+		
+		
+		
+		
+	}
+	private static void eklemeOgrenci() {
+		System.out.println("============= Eleme Menusu =============");
+			
+			Kisi Onc = new Ogrenci();
+			System.out.println("Numaranizi giriniz : ");
+			Ogrenci numara = scan.nextLine();
+			System.out.println("Lutfen sinifinizi giriniz : ");
+			String sinif = scan.nextLine();
+		
+		
+		
+		
+	}
+	
+	
 }
