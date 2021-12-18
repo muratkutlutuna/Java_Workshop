@@ -12,6 +12,7 @@ public class LibraryRunner extends LibraryDatabase {
 
 	
 	public static void main(String[] args) {
+
 		headlineFormat("LIBRARY");
 		menu();
 		headlineFormat("Thanks for your visit :)");
@@ -57,10 +58,14 @@ public class LibraryRunner extends LibraryDatabase {
 
 	static void toShowBookList() {
 		headlineFormat("Book list");
-		System.out.println("\tNo\tBooks\n"
-				+ "____________________________________");
+		System.out.println("\tNo\tBooks\t\tAuthors\t\tPresses\t\tPrices\n"
+				+ "_______________________________________________________________________________");
 		for (int i = 0; i < lib.getBookList().size(); i++) {
-			System.out.println("\t"+lib.getBookNoList().get(i)+"\t"+lib.getBookList().get(i));
+			System.out.println("\t"+lib.getBookNoList().get(i)+"\t"+
+					lib.getBookList().get(i)+"\t"+
+					lib.getAuthorList().get(i)+"\t"+
+					lib.getPressList().get(i)+"\t"+
+					lib.getPriceList().get(i)+"\n");
 		}
 		System.out.println("menuye donmek icin bir karakter giriniz.");
 		scan.nextLine();
@@ -72,7 +77,8 @@ public class LibraryRunner extends LibraryDatabase {
 		System.out.println("Please enter the serial number of book");
 		inputNo=scan.nextInt();
 		scan.nextLine();
-		System.out.println("Deleting book name is : "+lib.getBook(inputNo)+"\nwith number : "+lib.getBookNo(lib.getBook(inputNo)));
+		int no = lib.getBookNoList().indexOf(inputNo);
+		System.out.println("Deleting book name is : "+lib.getBook(no)+"\nwith number : "+inputNo);
 		lib.setRemoveBook(inputNo);
 		System.out.println("Book has deleted.\n");
 	}
@@ -82,15 +88,30 @@ public class LibraryRunner extends LibraryDatabase {
 	static void showBookByNo() {
 		headlineFormat("Show book by number");
 		System.out.println("Please enter the serial number of book");
-		inputNo=scan.nextInt();
+		inputNo=lib.getBookNoList().indexOf(scan.nextInt());
 		scan.nextLine();
-		System.out.println("Book name is : "+lib.getBook(inputNo)+"\nwith number : "+lib.getBookNo(lib.getBook(inputNo))+"\n");
-	}
+		System.out.println("\tNo\tBooks\t\tAuthors\t\tPresses\t\tPrices\n"
+				+ "_______________________________________________________________________________");
+		System.out.println("\t"+lib.getBookNo(inputNo)+"\t"+
+				lib.getBook(inputNo)+"\t"+
+				lib.getAuthor(inputNo)+"\t"+
+				lib.getPress(inputNo)+"\t"+
+				lib.getPrice(inputNo)+"\n"
+				+ "_______________________________________________________________________________");
+		}
 
 	static void addBook() {
 		headlineFormat("Add Book");
 		System.out.println("Please enter the book name");
-		lib.setBook(scan.nextLine());
+		String book = scan.nextLine();
+		System.out.println("Please enter Author name of the book");
+		String author = scan.nextLine();
+		System.out.println("Please enter press name of the book");
+		String press = scan.nextLine();
+		System.out.println("Please enter price of the book");
+		double price = scan.nextDouble();
+		scan.nextLine();
+		lib.setBook(book,author,press,price);
 		System.out.println("Kitap eklendi.\n");
 		
 		
