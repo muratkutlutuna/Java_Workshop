@@ -1,7 +1,7 @@
 package geometricProject;
 
 
-public class Shape {
+public class Parameters {
 	
 	public double getSideLength() {
 		return sideLength;
@@ -24,7 +24,7 @@ public class Shape {
 	public double getPi() {
 		return Pi;
 	}
-	final double Pi = 3.14;
+	private final double Pi = 3.14;
 	private double sideLength;
 	private double longSideLength;
 	private double radius;

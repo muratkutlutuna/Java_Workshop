@@ -1,17 +1,9 @@
 package geometricProject;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Parameters {
 
-	private double rectanglePremeter;
-	private double rectangleSpace;
-
-	public double getRectanglePremeter() {
-		return rectanglePremeter;
-	}
-
-	public double getRectangleSpace() {
-		return rectangleSpace;
-	}
+	private double premeter;
+	private double space;
 
 	Rectangle(){
 		
@@ -20,8 +12,18 @@ public class Rectangle extends Shape {
 	Rectangle(double sideLength, double LongSideLength){
 		super.setSideLength(sideLength);
 		super.setLongSideLength(LongSideLength);
-		this.rectanglePremeter=(super.getLongSideLength()*2)+(super.getSideLength()*2);
-		this.rectangleSpace=(super.getLongSideLength()*super.getSideLength());
+		this.premeter=(super.getLongSideLength()*2)+(super.getSideLength()*2);
+		this.space=(super.getLongSideLength()*super.getSideLength());
 	}
+
+	public double getPremeter() {
+		return premeter;
+	}
+
+	public double getSpace() {
+		return space;
+	}
+
+	
 	
 }
