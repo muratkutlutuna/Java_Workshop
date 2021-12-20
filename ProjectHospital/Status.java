@@ -26,7 +26,7 @@ public class Status  {
 	}
 	@Override
 	public String toString() {
-		return "Status [actualStatus=" + actualStatus + ", urgency=" + (urgency==true?"Urgent":"not Urgent") + "]";
+		return "Status [actualStatus=" + getActualStatus() + ", urgency=" + (isUrgency()==true?"Urgent":"not Urgent") + "]";
 	}
 	
 	
