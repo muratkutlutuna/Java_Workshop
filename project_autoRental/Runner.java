@@ -25,9 +25,9 @@ public class Runner {
 		carList.add(c1);
 		c1 = new Car("toyota","corolla","diesel","manuel",100.0);
 		carList.add(c1);
-		c1 = new Car("volvo","s60","oil","outo",140.0);
+		c1 = new Car("volvo","s60","oil","auto",140.0);
 		carList.add(c1);	
-		carList.stream();
+
 	}
 
 	
