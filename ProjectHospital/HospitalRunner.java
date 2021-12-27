@@ -37,7 +37,7 @@ public class HospitalRunner {
 			case 3:
 				System.out.println("Please enter patient's problem");
 				containerStr = scan.nextLine();
-				System.out.println(findPatient(containerStr).toString());
+				System.out.println(findPatient(containerStr).getPatientStatus().toString());
 				break;
 			case 4:
 				System.out.println("Keep yourself healthy! Goodbye!");
