@@ -20,7 +20,6 @@ public class ForLoop3 {
             }
         }
         System.out.println(harf);
-
 	}
 
 }
