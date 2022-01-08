@@ -1,4 +1,4 @@
-package InterviewQuestions;
+package interviewQuestions;
 
 import java.lang.annotation.AnnotationTypeMismatchException;
 import java.util.Arrays;

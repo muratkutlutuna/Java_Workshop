@@ -1,4 +1,4 @@
-package InterviewQuestions;
+package interviewQuestions;
 
 public class QuestionTeam1 {
 	int a1;
